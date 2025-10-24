@@ -6,11 +6,11 @@ import heroImage from './hero-image.jpg';
 
 export default function HomePage() {
   const slideshowImages = [
-    '/images/apartment-1.avif',
-    '/images/apartment-2.avif',
-    '/images/apartment-3.avif',
-    '/images/apartment-4.avif',
-    '/images/apartment-6.avif',
+    '/images/apartment-1.jpg',
+    '/images/apartment-2.jpg',
+    '/images/apartment-3.jpg',
+    '/images/apartment-4.jpg',
+    '/images/apartment-6.jpg',
   ];
 
   return (
@@ -18,9 +18,12 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center">
         <Image
           src={heroImage}
+          src={heroImage}
           alt="A beautiful view from Casa Calala"
           fill
           className="object-cover -z-10"
+          placeholder="blur"
+          priority
           placeholder="blur"
           priority
         />
@@ -29,7 +32,10 @@ export default function HomePage() {
           <div className="mb-4">
             <Image
               src="/logo.svg"
+              src="/logo.svg"
               alt="Casa Calala Logo"
+              width={120}
+              height={120}
               width={120}
               height={120}
               className="mx-auto"
@@ -56,11 +62,14 @@ export default function HomePage() {
               Welcome to Casa Calala
             </h2>
             {/* --- THIS IS THE FIX --- */}
+            {/* --- THIS IS THE FIX --- */}
             <p className="mt-6 text-lg text-gray-600">
               Step into the heart of Granada and stay in our cozy colonial-style guesthouse, where every apartment is designed for comfort and charm. Relax in our common living area, enjoy the city just steps away, and feel at home with our personal welcome and attentive care. We&apos;re here to help you explore, relax, and make the most of your stay!.
             </p>
             {/* --- END OF FIX --- */}
+            {/* --- END OF FIX --- */}
             <p className="mt-4 text-lg text-gray-600">
+              From the moment you arrive, our goal is to help you connect with the real Granada.
               From the moment you arrive, our goal is to help you connect with the real Granada.
             </p>
           </div>
