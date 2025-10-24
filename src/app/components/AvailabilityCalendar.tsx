@@ -1,15 +1,21 @@
-// For Visual Reference - The complete and final code for: src/app/components/AvailabilityCalendar.tsx
+// For Visual Reference - The final, complete code for: src/app/components/AvailabilityCalendar.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 
-// === THIS IS THE FIX ===
-// The 'Props' type is now updated to expect 'apartmentId' instead of the old iCal URLs.
+// Define the shape of the props this component accepts
 type Props = {
   apartmentId: string;
 };
-// === END OF THE FIX ===
+
+// --- THIS IS THE FIX ---
+// We define the shape of the objects we expect back from our API.
+type BlockedDateFromAPI = {
+  apartmentId: string;
+  date: string;
+};
+// --- END OF THE FIX ---
 
 export default function AvailabilityCalendar({ apartmentId }: Props) {
   const [blockedDates, setBlockedDates] = useState<string[]>([]);
@@ -21,11 +27,13 @@ export default function AvailabilityCalendar({ apartmentId }: Props) {
       try {
         const response = await fetch('/api/blocked-dates');
         if (response.ok) {
-          const data = await response.json();
-          // This logic correctly filters for the specific apartment's dates
+          // Tell TypeScript to expect an array of our defined type
+          const data: BlockedDateFromAPI[] = await response.json();
+
+          // This logic now works without any 'any' types
           const apartmentBlockedDates = data
-            .filter((d: any) => d.apartmentId === apartmentId)
-            .map((d: any) => d.date);
+            .filter((d) => d.apartmentId === apartmentId)
+            .map((d) => d.date);
           setBlockedDates(apartmentBlockedDates);
         } else {
           console.error("API responded with an error");
@@ -36,7 +44,7 @@ export default function AvailabilityCalendar({ apartmentId }: Props) {
       setIsLoading(false);
     }
     fetchBlockedDates();
-  }, [apartmentId]); // The dependency array now correctly includes apartmentId
+  }, [apartmentId]);
 
   const tileDisabled = ({ date, view }: { date: Date, view: string }) => {
     if (view === 'month') {
