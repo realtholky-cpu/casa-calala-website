@@ -64,7 +64,6 @@ export default function HomePage() {
             {/* --- END OF FIX --- */}
             <p className="mt-4 text-lg text-gray-600">
               From the moment you arrive, our goal is to help you connect with the real Granada.
-              From the moment you arrive, our goal is to help you connect with the real Granada.
             </p>
           </div>
           <div>

@@ -9,7 +9,7 @@ import Autoplay from 'embla-carousel-autoplay';
 export default function ReviewsPage() {
   const reviews = [
     {
-      quote: "I stayed here for more than a week and felt very comfortable. Carlos is very friendly and attentive, the communication was great and I also felt well taken care of in the area. Every 2–3 days my room was cleaned, the bed linen changed, the trash can emptied and the bathroom including toilet cleaned. I liked this service very much. I thank you from the bottom of my heart for everything.",
+      quote: "I stayed here for more than a week and felt very comfortable. Carlos is very friendly and attentive, the communication was great and I also felt well taken care of in the area. Every 2 to 3 days my room was cleaned, the bed linen changed, the trash can emptied and the bathroom including toilet cleaned. I liked this service very much. I thank you from the bottom of my heart for everything.",
       author: "Melanie",
       source: "airbnb",
       rating: 5,
@@ -95,7 +95,7 @@ export default function ReviewsPage() {
                   {/* --- END OF NEW SECTION --- */}
 
                   <div className="flex-grow">
-                    <p className="text-lg italic text-gray-700">"{review.quote}"</p>
+                    <p className="text-lg italic text-gray-700">{review.quote}</p>
                   </div>
 
                   <div className="mt-6 border-t pt-4 flex items-center justify-between">
