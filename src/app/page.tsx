@@ -18,12 +18,9 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center">
         <Image
           src={heroImage}
-          src={heroImage}
           alt="A beautiful view from Casa Calala"
           fill
           className="object-cover -z-10"
-          placeholder="blur"
-          priority
           placeholder="blur"
           priority
         />
@@ -32,10 +29,7 @@ export default function HomePage() {
           <div className="mb-4">
             <Image
               src="/logo.svg"
-              src="/logo.svg"
               alt="Casa Calala Logo"
-              width={120}
-              height={120}
               width={120}
               height={120}
               className="mx-auto"
@@ -59,7 +53,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              Welcome to Casa Calala
+              Welcome to Casa Calala!
             </h2>
             {/* --- THIS IS THE FIX --- */}
             {/* --- THIS IS THE FIX --- */}
