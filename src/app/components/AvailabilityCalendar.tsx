@@ -1,92 +1,67 @@
-// For Visual Reference - The complete code for: src/app/components/AvailabilityCalendar.tsx
+// For Visual Reference - The complete and final code for: src/app/components/AvailabilityCalendar.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import icsToJson from 'ics-parser';
 
+// === THIS IS THE FIX ===
+// The 'Props' type is now updated to expect 'apartmentId' instead of the old iCal URLs.
 type Props = {
-  airbnbIcalUrl: string;
-  bookingIcalUrl: string;
+  apartmentId: string;
 };
+// === END OF THE FIX ===
 
-// --- THIS IS THE FIX ---
-// We define a simple type for the events we expect from the ics file.
-type CalendarEvent = {
-  startDate: string;
-  endDate: string;
-  summary?: string; // The summary is optional
-};
-// --- END OF FIX ---
-
-type BookedEvent = {
-  startDate: Date;
-  endDate: Date;
-};
-
-export default function AvailabilityCalendar(props: Props) {
-  const [bookedDates, setBookedDates] = useState<BookedEvent[]>([]);
+export default function AvailabilityCalendar({ apartmentId }: Props) {
+  const [blockedDates, setBlockedDates] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchAndSetBookedDates() {
+    async function fetchBlockedDates() {
       setIsLoading(true);
-      let allEvents: CalendarEvent[] = []; // Use our new type here
       try {
-        if (props.airbnbIcalUrl && !props.airbnbIcalUrl.includes('PASTE_YOUR')) {
-          const res = await fetch(`/api/calendar?url=${encodeURIComponent(props.airbnbIcalUrl)}`);
-          if (res.ok) allEvents = allEvents.concat(icsToJson(await res.text()));
+        const response = await fetch('/api/blocked-dates');
+        if (response.ok) {
+          const data = await response.json();
+          // This logic correctly filters for the specific apartment's dates
+          const apartmentBlockedDates = data
+            .filter((d: any) => d.apartmentId === apartmentId)
+            .map((d: any) => d.date);
+          setBlockedDates(apartmentBlockedDates);
+        } else {
+          console.error("API responded with an error");
         }
-        if (props.bookingIcalUrl && !props.bookingIcalUrl.includes('PASTE_YOUR')) {
-          const res = await fetch(`/api/calendar?url=${encodeURIComponent(props.bookingIcalUrl)}`);
-          if (res.ok) allEvents = allEvents.concat(icsToJson(await res.text()));
-        }
-
-        const processedDates = allEvents.map(event => ({
-          startDate: new Date(event.startDate),
-          endDate: new Date(event.endDate),
-        }));
-        setBookedDates(processedDates);
-
       } catch (error) {
-        console.error("Failed to fetch calendar data:", error);
-        setBookedDates([]);
+        console.error("Failed to fetch blocked dates:", error);
       }
       setIsLoading(false);
     }
-
-    fetchAndSetBookedDates();
-  }, [props.airbnbIcalUrl, props.bookingIcalUrl]);
-
-  const isDateBooked = (date: Date) => {
-    return bookedDates.some(event => 
-      date >= event.startDate && date < event.endDate
-    );
-  };
+    fetchBlockedDates();
+  }, [apartmentId]); // The dependency array now correctly includes apartmentId
 
   const tileDisabled = ({ date, view }: { date: Date, view: string }) => {
     if (view === 'month') {
-      return isDateBooked(date);
+      const dateString = date.toISOString().split('T')[0];
+      return blockedDates.includes(dateString);
     }
     return false;
   };
 
-  if (isLoading) {
-    return <div className="mt-8">Loading availability...</div>
-  }
-
   return (
-    <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Check Availability</h2>
-      <div className="flex justify-center">
-        <Calendar
-          tileDisabled={tileDisabled}
-          minDate={new Date()}
-        />
-      </div>
+    <div className="mt-8 bg-gray-50 p-6 rounded-lg shadow-inner">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">Availability</h2>
+      {isLoading ? (
+        <p>Loading calendar...</p>
+      ) : (
+        <div className="flex justify-center">
+          <Calendar 
+            tileDisabled={tileDisabled} 
+            minDate={new Date()} 
+            value={null}
+          />
+        </div>
+      )}
       <p className="mt-4 text-sm text-center text-gray-500">
-        Dates marked in gray are unavailable.
+        Dates marked in red are unavailable.
       </p>
     </div>
   );
