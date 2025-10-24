@@ -2,14 +2,13 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
-// === THIS IS THE CORRECTED SECTION ===
-// We import the main function on one line...
-import useEmblaCarousel from 'embla-carousel-react';
-// ...and we import the TYPE on a separate line. This is the fix.
-import type { UseEmblaCarouselType } from 'embla-carousel-react';
-// === END OF CORRECTED SECTION ===
+// --- THIS IS THE FIX ---
+// The line below was for a type we are not using. We will delete it.
+// import { type UseEmblaCarouselType as EmblaCarouselType } from 'embla-carousel-react';
+// --- END OF FIX ---
 
 type Props = {
   images: string[];
@@ -49,7 +48,6 @@ export default function RoomImageGallery({ images }: Props) {
 
   return (
     <div className="space-y-4">
-      {/* Main Image Viewer */}
       <div className="overflow-hidden relative rounded-lg shadow-lg" ref={emblaMainRef}>
         <div className="flex">
           {images.map((src, index) => (
@@ -58,7 +56,6 @@ export default function RoomImageGallery({ images }: Props) {
             </div>
           ))}
         </div>
-        {/* Prev/Next Buttons */}
         <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow-md hover:bg-white" onClick={scrollPrev}>
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
         </button>
@@ -66,8 +63,6 @@ export default function RoomImageGallery({ images }: Props) {
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
         </button>
       </div>
-
-      {/* Thumbnail Navigation */}
       <div className="overflow-hidden" ref={emblaThumbsRef}>
         <div className="flex space-x-3">
           {images.map((src, index) => (
