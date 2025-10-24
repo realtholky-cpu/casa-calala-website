@@ -26,7 +26,7 @@ export default function Apartment3Page() {
       </div>
       <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">About this space</h2>
-        <p className="text-lg text-gray-700">This comfortable one-bedroom unit is perfect for travelers looking for simplicity, privacy, and great value in the heart of Granada. The apartment includes a private bedroom with bathroom, a compact kitchen/dining area, it's offering all the essentials for a relaxing stay.</p>
+        <p className="text-lg text-gray-700">This comfortable one-bedroom unit is perfect for travelers looking for simplicity, privacy, and great value in the heart of Granada. The apartment includes a private bedroom with bathroom, a compact kitchen/dining area, it&apos;s offering all the essentials for a relaxing stay.</p>
       </div>
       <AvailabilityCalendar apartmentId="apartment-3" />
       <div className="mt-8 text-center">

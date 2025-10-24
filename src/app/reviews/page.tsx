@@ -68,7 +68,7 @@ export default function ReviewsPage() {
             Straight from Our Guests
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            We're proud of our 5-star reputation. Here's what our guests have to say.
+            We&apos;re proud of our 5-star reputation. Here&apos;s what our guests have to say.
           </p>
         </div>
 
