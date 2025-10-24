@@ -1,0 +1,21 @@
+/* For Visual Reference - The complete code for: src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This ensures our custom styles for the calendar are available everywhere */
+.react-calendar {
+  & .react-calendar__tile:disabled {
+    background-color: #fca5a5 !important; /* A lighter red for public view */
+    color: #4b5563 !important;
+    opacity: 1 !important;
+    border-radius: 6px;
+  }
+}
+
+/* This is the special class for our ADMIN calendar's blocked dates */
+.date-blocked {
+  background-color: #ef4444 !important; /* A strong red */
+  color: white !important;
+  border-radius: 6px;
+}

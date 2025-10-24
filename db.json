@@ -1,0 +1,12 @@
+{
+  "blockedDates": [
+    {
+      "apartmentId": "apartment-1",
+      "date": "2025-10-28"
+    },
+    {
+      "apartmentId": "apartment-1",
+      "date": "2025-10-29"
+    }
+  ]
+}
