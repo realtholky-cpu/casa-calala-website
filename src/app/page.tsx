@@ -1,43 +1,37 @@
 // For Visual Reference - The complete code for: src/app/page.tsx
-
 import Image from 'next/image';
 import Link from 'next/link';
 import ImageSlideshow from './components/ImageSlideshow';
-
-// Import the hero image file directly from the src/app/ folder.
-// Make sure your 'hero-image.jpg' is placed in this folder.
 import heroImage from './hero-image.jpg';
 
 export default function HomePage() {
   const slideshowImages = [
-    '/images/apartment-1.avif',
-    '/images/apartment-2.avif',
-    '/images/apartment-3.avif',
-    '/images/apartment-4.avif',
-    '/images/apartment-6.avif',
+    '/images/apartment-1.jpg',
+    '/images/apartment-2.jpg',
+    '/images/apartment-3.jpg',
+    '/images/apartment-4.jpg',
+    '/images/apartment-6.jpg',
   ];
 
   return (
     <main>
-
-      {/* ===== HERO SECTION ===== */}
       <section className="relative h-screen flex items-center justify-center">
         <Image
-          src={heroImage} // Use the imported image variable here
+          src={heroImage}
           alt="A beautiful view from Casa Calala"
           fill
           className="object-cover -z-10"
-          placeholder="blur" // Adds a nice blur effect while loading
-          priority // Tells Next.js to load this image first
+          placeholder="blur"
+          priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative text-center text-white p-4">
           <div className="mb-4">
             <Image
-              src="/logo.png" // Assumes logo.svg is in the public/ folder
+              src="/logo.svg"
               alt="Casa Calala Logo"
-              width={320}
-              height={320}
+              width={120}
+              height={120}
               className="mx-auto"
             />
           </div>
@@ -55,20 +49,19 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      {/* ===== STORY / ABOUT SECTION ===== */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              Welcome to Casa Calala!
+              More Than a Stay, It&apos;s an Experience
             </h2>
+            {/* --- THIS IS THE FIX --- */}
             <p className="mt-6 text-lg text-gray-600">
-              Step into the heart of Granada and stay in our cozy colonial-style guesthouse, where every apartment is designed for comfort and charm. Relax in our common living area, enjoy the city just steps away, and feel at home with our personal welcome and attentive care.
+              Casa Calala was born from a passion for the vibrant culture and stunning beauty of Granada. We&apos;re not just a guesthouse; we are your local hosts, dedicated to making your visit unforgettable. Each of our apartments is designed to be your home away from home, blending modern comfort with authentic Nicaraguan charm.
             </p>
+            {/* --- END OF FIX --- */}
             <p className="mt-4 text-lg text-gray-600">
-              We're here to help you explore, relax, and make the most of your stay!
-
+              From the moment you arrive, our goal is to help you connect with the real Granada.
             </p>
           </div>
           <div>
@@ -76,8 +69,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ===== ICONS / HIGHLIGHTS SECTION ===== */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center">
