@@ -6,11 +6,11 @@ import heroImage from './hero-image.jpg';
 
 export default function HomePage() {
   const slideshowImages = [
-    '/images/apartment-1/ap1-2.avif',
-    '/images/apartment-2/main.avif',
-    '/images/apartment-3/main.avif',
-    '/images/apartment-4/main.avif',
-    '/images/apartment-6/main.avif',
+    '/images/apartment-1.avif',
+    '/images/apartment-2.avif',
+    '/images/apartment-3.avif',
+    '/images/apartment-4.avif',
+    '/images/apartment-6.avif',
   ];
 
   return (

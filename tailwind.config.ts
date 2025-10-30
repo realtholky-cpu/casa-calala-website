@@ -1,4 +1,4 @@
-// For Visual Reference - The complete code for: tailwind.config.ts
+// For Visual Reference - The simplified code for: tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,8 +10,7 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  // We are removing the plugins array for maximum simplicity
+  plugins: [],
 };
 export default config;

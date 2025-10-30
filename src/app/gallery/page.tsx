@@ -7,13 +7,17 @@ export default function GalleryPage() {
   const allGalleryImages = [
     '/images/gallery-home/home-1.avif',
     '/images/gallery-granada/granada-2.avif',
-    '/images/gallery-moments/moments-1.jpeg',
+    '/images/gallery-moments/mercado.jpeg',
+    '/images/gallery-moments/mombacho.jpeg',
+    '/images/gallery-moments/carnaval-2.jpeg',
     '/images/gallery-home/home-2.avif',
     '/images/gallery-granada/granada-3.avif',
+    '/images/gallery-moments/carnaval-1.jpeg',
     '/images/gallery-moments/moments-2.jpeg',
     '/images/gallery-home/home-3.avif',
+    '/images/gallery-moments/isletas.jpeg',
     '/images/gallery-granada/granada-4.avif',
-    '/images-gallery-moments/moments-3.jpeg',
+    '/images/gallery-moments/laguna.jpeg',
   ];
 
   return (

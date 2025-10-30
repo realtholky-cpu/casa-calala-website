@@ -7,6 +7,14 @@
     {
       "apartmentId": "apartment-1",
       "date": "2025-10-29"
+    },
+    {
+      "apartmentId": "apartment-2",
+      "date": "2025-11-13"
+    },
+    {
+      "apartmentId": "apartment-2",
+      "date": "2025-11-14"
     }
   ]
 }
