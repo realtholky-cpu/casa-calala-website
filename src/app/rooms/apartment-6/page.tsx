@@ -16,7 +16,7 @@ export default function Apartment6Page() {
     '/images/apartment-6/ap6-9.avif',
     '/images/apartment-6/ap6-10.avif',
     '/images/apartment-6/ap6-11.avif',
-    '/images/apartment-6/ap6-12.avif'
+    '/images/apartment-6/ap6-12.avif',
   ];
   const apartment6_booking_com_link = 'https://www.booking.com/hotel/ni/casa-calala.es.html?label=gen173nr-10CAsoqAFCC2Nhc2EtY2FsYWxhSDNYBGioAYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCt8XfxwbAAgHSAiRkOTIzZDMxOS1mMzZlLTRkY2EtODM3NS04YTQ0MWJjZDc1MGTYAgHgAgE&sid=bb1d84d5eb5312a4f136dbfdba828d89&dist=0&keep_landing=1&sb_price_type=total&type=total&';
 

@@ -5,7 +5,7 @@ import AvailabilityCalendar from '../../components/AvailabilityCalendar';
 
 export default function Apartment1Page() {
   const apartment1Images = [
-    '/images/apartment-1/main.avif',    // Make sure these files exist
+    '/images/apartment-1/main.avif',    
     '/images/apartment-1/bathroom.avif',
     '/images/apartment-1/balcony.avif',
     '/images/apartment-1/ap1-2.avif',
