@@ -6,11 +6,11 @@ import heroImage from './hero-image.jpg';
 
 export default function HomePage() {
   const slideshowImages = [
-    '/images/apartment-1.avif',
-    '/images/apartment-2.avif',
-    '/images/apartment-3.avif',
-    '/images/apartment-4.avif',
-    '/images/apartment-6.avif',
+    '/images/apartment-1/ap1-2.avif',
+    '/images/apartment-2/main.avif',
+    '/images/apartment-3/main.avif',
+    '/images/apartment-4/main.avif',
+    '/images/apartment-6/main.avif',
   ];
 
   return (
@@ -28,10 +28,10 @@ export default function HomePage() {
         <div className="relative text-center text-white p-4">
           <div className="mb-4">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Casa Calala Logo"
-              width={120}
-              height={120}
+              width={320}
+              height={320}
               className="mx-auto"
             />
           </div>
