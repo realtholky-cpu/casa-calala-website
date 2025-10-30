@@ -5,18 +5,18 @@ import AvailabilityCalendar from '../../components/AvailabilityCalendar';
 
 export default function Apartment6Page() {
   const apartment6Images = [
-    '/images/apartment-6/ap6-1.avif', 
-    '/images/apartment-6/ap6-2.avif',
-    '/images/apartment-6/ap6-3.avif',
-    '/images/apartment-6/ap6-4.avif',
-    '/images/apartment-6/ap6-5.avif',
-    '/images/apartment-6/ap6-6.avif',
-    '/images/apartment-6/ap6-7.avif',
-    '/images/apartment-6/ap6-8.avif',
-    '/images/apartment-6/ap6-9.avif',
-    '/images/apartment-6/ap6-10.avif',
-    '/images/apartment-6/ap6-11.avif',
-    '/images/apartment-6/ap6-12.avif',
+    {src: '/images/apartment-6/ap6-1.avif' }, 
+    {src: '/images/apartment-6/ap6-2.avif' },
+    {src: '/images/apartment-6/ap6-3.avif' },
+    {src: '/images/apartment-6/ap6-4.avif' },
+    {src: '/images/apartment-6/ap6-5.avif' },
+    {src: '/images/apartment-6/ap6-6.avif' },
+    {src: '/images/apartment-6/ap6-7.avif' },
+    {src: '/images/apartment-6/ap6-8.avif' },
+    {src: '/images/apartment-6/ap6-9.avif' },
+    {src: '/images/apartment-6/ap6-10.avif' },
+    {src: '/images/apartment-6/ap6-11.avif' },
+    {src: '/images/apartment-6/ap6-12.avif' },
   ];
   const apartment6_booking_com_link = 'https://www.booking.com/hotel/ni/casa-calala.es.html?label=gen173nr-10CAsoqAFCC2Nhc2EtY2FsYWxhSDNYBGioAYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCt8XfxwbAAgHSAiRkOTIzZDMxOS1mMzZlLTRkY2EtODM3NS04YTQ0MWJjZDc1MGTYAgHgAgE&sid=bb1d84d5eb5312a4f136dbfdba828d89&dist=0&keep_landing=1&sb_price_type=total&type=total&';
 

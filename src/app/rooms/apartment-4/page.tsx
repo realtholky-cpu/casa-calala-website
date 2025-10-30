@@ -5,6 +5,7 @@ import AvailabilityCalendar from '../../components/AvailabilityCalendar';
 
 export default function Apartment4Page() {
   const apartment4Images = [
+    
     {src: '/images/apartment-4/ap4-1.avif' }, 
     {src: '/images/apartment-4/ap4-2.avif' },
     {src: '/images/apartment-4/ap4-3.avif' },

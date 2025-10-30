@@ -5,15 +5,15 @@ import AvailabilityCalendar from '../../components/AvailabilityCalendar';
 
 export default function Apartment3Page() {
   const apartment3Images = [
-    '/images/apartment-3/ap3-1.avif', 
-    '/images/apartment-3/ap3-2.avif',
-    '/images/apartment-3/ap3-3.avif',
-    '/images/apartment-3/ap3-4.avif',
-    '/images/apartment-3/ap3-5.avif',
-    '/images/apartment-3/ap3-6.avif',
-    '/images/apartment-3/ap3-7.avif',
-    '/images/apartment-3/ap3-8.avif',
-    '/images/apartment-3/ap3-9.avif',
+    {src: '/images/apartment-3/ap3-1.avif' }, 
+    {src: '/images/apartment-3/ap3-2.avif' },
+    {src: '/images/apartment-3/ap3-3.avif' },
+    {src: '/images/apartment-3/ap3-4.avif' },
+    {src: '/images/apartment-3/ap3-5.avif' },
+    {src: '/images/apartment-3/ap3-6.avif' },
+    {src: '/images/apartment-3/ap3-7.avif' },
+    {src: '/images/apartment-3/ap3-8.avif' },
+    {src: '/images/apartment-3/ap3-9.avif' },
 
   ];
   const apartment3_booking_com_link = 'https://www.booking.com/hotel/ni/casa-calala.es.html?label=gen173nr-10CAsoqAFCC2Nhc2EtY2FsYWxhSDNYBGioAYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCt8XfxwbAAgHSAiRkOTIzZDMxOS1mMzZlLTRkY2EtODM3NS04YTQ0MWJjZDc1MGTYAgHgAgE&sid=bb1d84d5eb5312a4f136dbfdba828d89&dist=0&keep_landing=1&sb_price_type=total&type=total&';
