@@ -1,13 +1,17 @@
-// For Visual Reference - The complete code for: src/app/layout.tsx
+// For Visual Reference - The final, complete code for: src/app/layout.tsx
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from "next";
+// We do not need 'Metadata' here anymore because this is a client component
+// import type { Metadata } from "next"; 
 import { Inter } from "next/font/google";
 import 'react-calendar/dist/Calendar.css';
 import "./globals.css";
 import Link from "next/link";
 import Image from 'next/image';
+
+// --- THIS IS THE FIRST NEW LINE ---
+import { Analytics } from '@vercel/analytics/react'; // Import the Analytics component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +24,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      {/* It's good practice to add a <head> tag for metadata, though Next.js handles much of this */}
+      <head>
+        <title>Casa Calala - Guest House in Granada</title>
+      </head>
       <body className={inter.className}>
         <header className="bg-white shadow-md sticky top-0 z-50">
+          {/* ... Your entire <nav> section is perfect, no changes needed here ... */}
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
@@ -55,8 +64,6 @@ export default function RootLayout({
               </div>
             </div>
           </nav>
-
-          {/* This conditional logic is now correctly restored */}
           {isMenuOpen && (
             <div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -78,6 +85,10 @@ export default function RootLayout({
             <p className="mt-2">Granada, Nicaragua</p>
           </div>
         </footer>
+
+        {/* --- THIS IS THE SECOND NEW LINE --- */}
+        {/* Add the Analytics component just before the closing body tag */}
+        <Analytics />
       </body>
     </html>
   );
