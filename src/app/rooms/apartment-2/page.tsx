@@ -6,13 +6,13 @@ import AvailabilityCalendar from '../../components/AvailabilityCalendar';
 export default function Apartment2Page() {
   const apartment2Images = [
 
-    {src: '/images/apartment-2/ap2-1.avif' }, 
-    {src: '/images/apartment-2/ap2-2.avif' }, 
-    {src: '/images/apartment-2/ap2-3.avif' }, 
-    {src: '/images/apartment-2/ap2-4.avif' }, 
-    {src: '/images/apartment-2/ap2-7.avif' }, 
-    {src: '/images/apartment-2/ap2-8.avif' }, 
-    {src: '/images/apartment-2/ap2-9.avif' },
+    '/images/apartment-2/ap2-1.avif', 
+    '/images/apartment-2/ap2-2.avif', 
+    '/images/apartment-2/ap2-3.avif', 
+    '/images/apartment-2/ap2-4.avif', 
+    '/images/apartment-2/ap2-7.avif', 
+    '/images/apartment-2/ap2-8.avif', 
+    '/images/apartment-2/ap2-9.avif',
   
   ];
   const apartment2_booking_com_link = 'https://www.booking.com/hotel/ni/casa-calala.es.html?label=gen173nr-10CAsoqAFCC2Nhc2EtY2FsYWxhSDNYBGioAYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCt8XfxwbAAgHSAiRkOTIzZDMxOS1mMzZlLTRkY2EtODM3NS04YTQ0MWJjZDc1MGTYAgHgAgE&sid=bb1d84d5eb5312a4f136dbfdba828d89&dist=0&keep_landing=1&sb_price_type=total&type=total&';
