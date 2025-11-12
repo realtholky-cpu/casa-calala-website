@@ -44,8 +44,9 @@ export default function RootLayout({
                   <Link href="/rooms" className="text-gray-600 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium">Our Rooms</Link>
                   <Link href="/gallery" className="text-gray-600 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium">Gallery</Link>
                   <Link href="/reviews" className="text-gray-600 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium">Reviews</Link>
+                   <Link href="/blog" className="text-gray-600 hover:text-yellow-500 x`px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
                   <Link href="/contact" className="text-gray-600 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
-                  <Link href="/booking" className="bg-yellow-500 text-white hover:bg-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Booking</Link>
+                  <Link href="/experiences" className="bg-yellow-500 text-white hover:bg-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Experiences</Link>
                 </div>
               </div>
               <div className="md:hidden flex items-center">
@@ -70,8 +71,9 @@ export default function RootLayout({
                 <Link onClick={() => setIsMenuOpen(false)} href="/rooms" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Our Rooms</Link>
                 <Link onClick={() => setIsMenuOpen(false)} href="/gallery" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Gallery</Link>
                 <Link onClick={() => setIsMenuOpen(false)} href="/reviews" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Reviews</Link>
+                <Link onClick={() => setIsMenuOpen(false)} href="/experiences" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Experiences</Link>
                 <Link onClick={() => setIsMenuOpen(false)} href="/contact" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
-                <Link onClick={() => setIsMenuOpen(false)} href="/booking" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Booking</Link>
+                <Link onClick={() => setIsMenuOpen(false)} href="/blog" className="text-gray-800 hover:bg-yellow-100 block px-3 py-2 rounded-md text-base font-medium">Blog</Link>
               </div>
             </div>
           )}

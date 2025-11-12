@@ -15,6 +15,14 @@
     {
       "apartmentId": "apartment-2",
       "date": "2025-11-14"
+    },
+    {
+      "apartmentId": "casacolonial",
+      "date": "2025-11-13"
+    },
+    {
+      "apartmentId": "casacolonial",
+      "date": "2025-11-14"
     }
   ]
 }

@@ -90,7 +90,7 @@ export default function AdminCalendar() {
   };
   // === END OF NEW LOGIC ===
 
-  const apartments = ['apartment-1', 'apartment-2', 'apartment-3', 'apartment-4', 'apartment-6'];
+  const apartments = ['apartment-1', 'apartment-2', 'apartment-3', 'apartment-4', 'apartment-6', 'casacolonial'];
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">

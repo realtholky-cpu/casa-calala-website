@@ -64,6 +64,17 @@ export default function RoomsPage() {
           </div>
         </Link>
 
+                {/* Link to Casa Colonial */}
+        <Link
+          href="/rooms/casacolonial"
+          className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <div>
+            <h2 className="text-2xl font-semibold text-yellow-600">Casa Colonial: Modern Colonial House</h2>
+            <p className="mt-2 text-gray-700">Welcome to your private two-bedroom house with a plunge pool.</p> {/* Customize description */}
+          </div>
+        </Link>
+
       </div>
     </div>
   );
