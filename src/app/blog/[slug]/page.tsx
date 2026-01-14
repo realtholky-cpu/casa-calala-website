@@ -31,9 +31,7 @@ const posts: { [key: string]: { title: string; mainContent: React.ReactNode; sec
       },
       {
         type: 'interactive', title: '4. Quesillo',
-        description: <p>ChatGPT Plus
-
-Quesillo, a Nicaraguan classic, is pure comfort in a tortilla, soft cheese wrapped with pickled onions and rich cream, usually served warm in a plastic bag for the full roadside experience. Salty, tangy, and perfectly messy, it&apos;s a must-try for cheese lovers.</p>,
+        description: <p>Quesillo, a Nicaraguan classic, is pure comfort in a tortilla, soft cheese wrapped with pickled onions and rich cream, usually served warm in a plastic bag for the full roadside experience. Salty, tangy, and perfectly messy, it&apos;s a must-try for cheese lovers.</p>,
         images: ['/images/blog/food/quesillo-1.png', '/images/blog/food/quesillo-2.png','/images/blog/food/quesillo-3.png'], rating: 4, price: 1, locationName: "Quesería Don Chepe",
         mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1380.1294040634416!2d-85.95562048868301!3d11.933217705739352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f740dacff5bc4a3%3A0xbb1f3c2f69c13a13!2sQueser%C3%ADa%20Don%20Chepe!5e0!3m2!1sen!2sni!4v1762960774846!5m2!1sen!2sni" 
       },
